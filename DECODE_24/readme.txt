@@ -2,12 +2,12 @@
 * Copyright (C) 2016.10.03 eliuwei
 * All rights reserved.
 *
-*Github ID:eliuwei
-* 文件名称：DECODE_24
-* 描    述：该程序为2-4解码器，2个开关控制4个LED灯
-* 开发工具：QuartusII15.0+ModelsimSE10.4
-*芯片型号：Altera/CycloneIV
-           EP4CE6F17C8
-           EPCS16
+* Github ID: eliuwei
+* Project Name: DECODE_24
+* Description: Decoder
+* Tools: QuartusII_15.0 + ModelsimSE_10.4
+* Dervice/Chip: Altera/CycloneIV
+*               EP4CE6F17C8
+*               EPCS16
 ********************************************************************************/
 
