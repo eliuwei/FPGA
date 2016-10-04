@@ -1,0 +1,43 @@
+# do DECODE_24.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:59 on Oct 03,2016
+# vlog -work work DECODE_24.vo 
+# -- Compiling module DECODE_24
+# 
+# Top level modules:
+# 	DECODE_24
+# End time: 19:04:59 on Oct 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:59 on Oct 03,2016
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module DECODE_24_vlg_sample_tst
+# -- Compiling module DECODE_24_vlg_check_tst
+# -- Compiling module DECODE_24_vlg_vec_tst
+# 
+# Top level modules:
+# 	DECODE_24_vlg_vec_tst
+# End time: 19:04:59 on Oct 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -do "DECODE_24.do" 
+# Start time: 19:04:59 on Oct 03,2016
+# Loading work.DECODE_24_vlg_vec_tst
+# Loading work.DECODE_24
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading work.DECODE_24_vlg_sample_tst
+# Loading work.DECODE_24_vlg_check_tst
+# SDF 10.3d Compiler 2014.10 Oct  7 2014
+# 
+# Loading instances from DECODE_24_v.sdo
+# Loading timing data from DECODE_24_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /DECODE_24_vlg_vec_tst File: Waveform.vwf.vt
+# Simulation passed !
+# ** Note: $finish    : Waveform.vwf.vt(202)
+#    Time: 1 us  Iteration: 0  Instance: /DECODE_24_vlg_vec_tst/tb_out
+# End time: 19:05:00 on Oct 03,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
