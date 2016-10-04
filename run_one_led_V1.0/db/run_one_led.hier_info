@@ -1,0 +1,37 @@
+|run_one_led
+CLOCK => counter[0].CLK
+CLOCK => counter[1].CLK
+CLOCK => counter[2].CLK
+CLOCK => counter[3].CLK
+CLOCK => counter[4].CLK
+CLOCK => counter[5].CLK
+CLOCK => counter[6].CLK
+CLOCK => counter[7].CLK
+CLOCK => counter[8].CLK
+CLOCK => counter[9].CLK
+CLOCK => counter[10].CLK
+CLOCK => counter[11].CLK
+CLOCK => counter[12].CLK
+CLOCK => counter[13].CLK
+CLOCK => counter[14].CLK
+CLOCK => counter[15].CLK
+CLOCK => counter[16].CLK
+CLOCK => counter[17].CLK
+CLOCK => counter[18].CLK
+CLOCK => counter[19].CLK
+CLOCK => counter[20].CLK
+CLOCK => counter[21].CLK
+CLOCK => counter[22].CLK
+CLOCK => counter[23].CLK
+CLOCK => counter[24].CLK
+CLOCK => counter[25].CLK
+CLOCK => counter[26].CLK
+CLOCK => counter[27].CLK
+CLOCK => counter[28].CLK
+CLOCK => counter[29].CLK
+CLOCK => counter[30].CLK
+CLOCK => counter[31].CLK
+CLOCK => LED0~reg0.CLK
+LED0 <= LED0~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

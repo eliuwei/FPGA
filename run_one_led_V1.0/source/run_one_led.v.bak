@@ -1,0 +1,36 @@
+module run_one_led( RESET, CLOCK, LED0) 
+
+	parameter ONE=1'b1;
+
+	input RESET;
+	input CLOCK;
+	output LED0;
+	reg clk_1Hz;
+	reg[31:0] counter;
+	initial
+	begin
+		RESET = 1;
+		CLCOK = 1; 
+		clk_1Hz = 1;
+		counter = 32'h0000_0001;
+	end
+	
+	always @(negedge clk)
+		begin
+			if( counter>= 32'h0321_1111)
+				begin
+				clk_1Hz <= !clk_1Hz;				
+				counter <= 32'h0000;
+			else
+				counter <= (counter+32;h0000_0001);
+		end
+		
+	always @(negedge clk_1Hz)
+		begin
+			LED0 <= !LED0;
+		end
+	
+	
+	
+endmodule
+

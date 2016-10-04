@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Oct 04 17:51:47 2016
+Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
+Revision Name : run_one_led
+Top-level Entity Name : run_one_led
+Family : Cyclone IV E
+Device : EP4CE6F17C8
+Timing Models : Final
+Total logic elements : 46 / 6,272 ( < 1 % )
+    Total combinational functions : 44 / 6,272 ( < 1 % )
+    Dedicated logic registers : 33 / 6,272 ( < 1 % )
+Total registers : 33
+Total pins : 2 / 180 ( 1 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
