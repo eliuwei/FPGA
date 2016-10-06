@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/quartus_Project/run_leds_V1_0/simulation/modelsim
+vrun_leds_V1_0
+Z1 !s110 1475723502
+!i10b 1
+!s100 =c3N[TiDjB=5P3PQfDjSz3
+II3e_BQ=2O;;<fkKDCRlkg1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1475722043
+8E:/quartus_Project/run_leds_V1_0/source/run_leds_V1_0.v
+FE:/quartus_Project/run_leds_V1_0/source/run_leds_V1_0.v
+L0 1
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1475723501.987000
+!s107 E:/quartus_Project/run_leds_V1_0/source/run_leds_V1_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_Project/run_leds_V1_0/source|E:/quartus_Project/run_leds_V1_0/source/run_leds_V1_0.v|
+!i113 1
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+E:/quartus_Project/run_leds_V1_0/source -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+nrun_leds_@v1_0
+vrun_leds_V1_0_vlg_tst
+R1
+!i10b 1
+!s100 S?EMXR]cNd8`99F9_o;9X2
+ISTM]=K_VREBLaT98ISllK3
+R2
+R0
+w1475723472
+8E:/quartus_Project/run_leds_V1_0/simulation/modelsim/run_leds_V1_0.vt
+FE:/quartus_Project/run_leds_V1_0/simulation/modelsim/run_leds_V1_0.vt
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1475723502.121000
+!s107 E:/quartus_Project/run_leds_V1_0/simulation/modelsim/run_leds_V1_0.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/quartus_Project/run_leds_V1_0/simulation/modelsim|E:/quartus_Project/run_leds_V1_0/simulation/modelsim/run_leds_V1_0.vt|
+!i113 1
+R4
+!s92 -vlog01compat -work work +incdir+E:/quartus_Project/run_leds_V1_0/simulation/modelsim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+nrun_leds_@v1_0_vlg_tst

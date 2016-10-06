@@ -1,0 +1,40 @@
+|run_leds_V1_0
+CLOCK => counter1[0].CLK
+CLOCK => counter1[1].CLK
+CLOCK => counter1[2].CLK
+CLOCK => counter1[3].CLK
+CLOCK => counter1[4].CLK
+CLOCK => counter1[5].CLK
+CLOCK => counter1[6].CLK
+CLOCK => counter1[7].CLK
+CLOCK => counter1[8].CLK
+CLOCK => counter1[9].CLK
+CLOCK => counter1[10].CLK
+CLOCK => counter1[11].CLK
+CLOCK => counter1[12].CLK
+CLOCK => counter1[13].CLK
+CLOCK => counter1[14].CLK
+CLOCK => counter1[15].CLK
+CLOCK => counter1[16].CLK
+CLOCK => counter1[17].CLK
+CLOCK => counter1[18].CLK
+CLOCK => counter1[19].CLK
+CLOCK => counter1[20].CLK
+CLOCK => counter1[21].CLK
+CLOCK => counter1[22].CLK
+CLOCK => counter1[23].CLK
+CLOCK => counter1[24].CLK
+CLOCK => counter1[25].CLK
+CLOCK => counter1[26].CLK
+CLOCK => counter1[27].CLK
+CLOCK => counter1[28].CLK
+CLOCK => counter1[29].CLK
+CLOCK => counter1[30].CLK
+CLOCK => counter1[31].CLK
+CLOCK => _1kHz_clk.CLK
+LED[0] <= LED[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= LED[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= LED[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= LED[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
