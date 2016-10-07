@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/quartus_Project/MyWatch_V1_0/simulation/qsim
+vMyWatch_V1_0
+Z1 !s110 1475765313
+!i10b 1
+!s100 R?ni[caET94=bibLzS]kD3
+IhHfBlC2=jPGPcmHLP:oK80
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1475765311
+8MyWatch_V1_0.vo
+FMyWatch_V1_0.vo
+L0 32
+Z3 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1475765313.206000
+!s107 MyWatch_V1_0.vo|
+!s90 -work|work|MyWatch_V1_0.vo|
+!i113 1
+Z4 o-work work
+n@my@watch_@v1_0
+vMyWatch_V1_0_vlg_check_tst
+R1
+!i10b 1
+!s100 n3_2c<Gee3WeF4J:=W00b0
+I`Y9FNUQ^d@hRodV8`aQKd3
+R2
+R0
+Z5 w1475765308
+Z6 8Waveform.vwf.vt
+Z7 FWaveform.vwf.vt
+L0 66
+R3
+r1
+!s85 0
+31
+Z8 !s108 1475765313.298000
+Z9 !s107 Waveform.vwf.vt|
+Z10 !s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+n@my@watch_@v1_0_vlg_check_tst
+vMyWatch_V1_0_vlg_sample_tst
+R1
+!i10b 1
+!s100 ]i5[3_aSNG[hga[QC>e:A2
+ImK3aC:_eORi4;l7;bnjc;0
+R2
+R0
+R5
+R6
+R7
+L0 30
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4
+n@my@watch_@v1_0_vlg_sample_tst
+vMyWatch_V1_0_vlg_vec_tst
+R1
+!i10b 1
+!s100 VTLTa?]kInE166j;ojFn13
+I?2zMK=:8dXVP<OS_G^3<C2
+R2
+R0
+R5
+R6
+R7
+L0 402
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4
+n@my@watch_@v1_0_vlg_vec_tst

@@ -1,0 +1,56 @@
+module TimeToBCD (clk,Hour, Minute, Second,SEL,DIG);
+	input clk;
+	input [7:0] Hour,Minute,Second;
+	output [7:0] DIG;
+	output [5:0] SEL;
+	reg [7:0] DIG;
+	reg [5:0] SEL;
+	
+	reg [3:0] Hour_Ten,Hour_One, Minute_Ten,Minute_One, Second_Ten,Second_One;、
+	reg [5:0] enLED;
+	
+	//parameter ZERO = 0xc0,TWO=0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90
+	//0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90,0x88,0x83,0xc6,0xa1,0x86,0x8e
+	always @(negedge clk )
+	begin
+		Hour_Ten <= Hour/10;
+		Hour_One <= Hour%10；
+		
+		Minute_Ten <= Minute/10;
+		Minute_One <= Minute%10；
+		
+		Second_Ten <= Second/10;
+		Second_One <= Second%10；	
+	end
+	
+	always @(negedge clk)
+	begin
+		if( SEL == 8'b1000_0000 )
+			SEL <= 8'b0000_0001;
+		else
+			SEL <= SEL<<1;	
+	end
+	
+	always @( negedge clk)
+	begin
+		case(SEL):
+			8'b0000_0001: Second_One;
+			8'b0000_0001:
+			8'b0000_0001:
+			8'b0000_0001:
+			8'b0000_0001:
+			8'b0000_0001:
+			8'b0000_0001:
+			8'b0000_0001:
+			8'b0000_0001:
+	end
+	
+	
+	
+endmodule 
+
+
+
+
+
+
