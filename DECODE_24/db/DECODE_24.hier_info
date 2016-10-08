@@ -1,9 +1,0 @@
-|DECODE_24
-data_in[0] => Decoder0.IN1
-data_in[1] => Decoder0.IN0
-data_out[0] << Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[1] << Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[2] << Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[3] << Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-
-
