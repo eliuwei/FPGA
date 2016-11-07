@@ -1,0 +1,50 @@
+module ps2_keyboard_to_hex
+(
+    CLK, RSTn,
+	 PS2_CLK_Pin_In, PS2_Data_Pin_In,
+	 TX_Done_Sig,
+	 TX_En_Sig, TX_Data,
+	 LED	 
+);
+
+	 input CLK;
+	 input RSTn;
+	 input PS2_CLK_Pin_In, PS2_Data_Pin_In;
+	 input TX_Done_Sig;
+	 output TX_En_Sig;
+	 output [7:0]TX_Data;
+	 output [3:0]LED;
+	 reg [3:0]LED;
+
+	 
+	wire [7:0]PS2_Data;
+	 wire PS2_Done_Sig;
+	 
+	 ps2_module PS2MODULE1
+	 (
+	     .CLK( CLK ),
+		  .RSTn( RSTn ),
+		  .PS2_CLK_Pin_In( PS2_CLK_Pin_In ),   // input - from top
+		  .PS2_Data_Pin_In( PS2_Data_Pin_In ), // input - from top
+		  .PS2_Data( PS2_Data ),               // output - to U2
+		  .PS2_Done_Sig( PS2_Done_Sig )        // ouput - to U2
+	 );  
+	 
+	 reg [7:0] KeyBoardData; 
+	 always @ ( posedge CLK or negedge RSTn )
+	     if( !RSTn )
+		      begin
+				    KeyBoardData <= 8'b0000_0000;
+				end
+         else if( PS2_Done_Sig )
+			   case( PS2_Data )				    
+					 8'h1d:  begin KeyBoardData <= 8'h57;  LED<=4'b0001;      end
+					 
+					 8'h22:  begin KeyBoardData <= 8'h58;  LED<=4'b0010;     end
+					 
+					 8'h35:  begin KeyBoardData <= 8'h59;	LED<=4'b0100;		end	
+				endcase	
+
+
+
+endmodule 

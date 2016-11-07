@@ -1,0 +1,14 @@
+
+State Machine - |ps2_uart|tx_module_demo:TX_U2|ps2_tx_control_module:U1|NextState
+Name NextState.11 NextState.10 NextState.01 NextState.00 
+NextState.00 0 0 0 0 
+NextState.01 0 0 1 1 
+NextState.10 0 1 0 1 
+NextState.11 1 0 0 1 
+
+State Machine - |ps2_uart|tx_module_demo:TX_U2|ps2_tx_control_module:U1|CurrentState
+Name CurrentState.11 CurrentState.10 CurrentState.01 CurrentState.00 
+CurrentState.00 0 0 0 0 
+CurrentState.01 0 0 1 1 
+CurrentState.10 0 1 0 1 
+CurrentState.11 1 0 0 1 

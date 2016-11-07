@@ -1,0 +1,506 @@
+Analysis & Synthesis report for ps2_uart
+Mon Nov 07 09:14:43 2016
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Partition Status Summary
+  7. Dependent File Changes for Partition Top
+  8. Partition for Top-Level Resource Utilization by Entity
+  9. State Machine - |ps2_uart|tx_module_demo:TX_U2|ps2_tx_control_module:U1|NextState
+ 10. State Machine - |ps2_uart|tx_module_demo:TX_U2|ps2_tx_control_module:U1|CurrentState
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: rx_module_demo:RX_U1|LED_Display:LED_U
+ 15. Parameter Settings for User Entity Instance: tx_module_demo:TX_U2|ps2_module:UUtop|ps2_detect_module:U1
+ 16. Partition Dependent Files
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Port Connectivity Checks: "rx_module_demo:RX_U1|rx_output_data:U2"
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Nov 07 09:14:43 2016       ;
+; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
+; Revision Name                      ; ps2_uart                                    ;
+; Top-level Entity Name              ; ps2_uart                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE6F17C8        ;                    ;
+; Top-level entity name                                                      ; ps2_uart           ; ps2_uart           ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++------------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path         ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                     ; Library ;
++------------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------+---------+
+; source/ps2_uart.v                        ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/ps2_uart.v                        ;         ;
+; source/tx_source/tx_module_demo.v        ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/tx_source/tx_module_demo.v        ;         ;
+; source/tx_source/tx_module.v             ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/tx_source/tx_module.v             ;         ;
+; source/tx_source/tx_control_module.v     ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/tx_source/tx_control_module.v     ;         ;
+; source/tx_source/tx_bps_module.v         ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/tx_source/tx_bps_module.v         ;         ;
+; source/tx_source/ps2_tx_control_module.v ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/tx_source/ps2_tx_control_module.v ;         ;
+; source/tx_source/ps2_module.v            ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/tx_source/ps2_module.v            ;         ;
+; source/tx_source/ps2_keyboard_to_hex.v   ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/tx_source/ps2_keyboard_to_hex.v   ;         ;
+; source/tx_source/ps2_detect_module.v     ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/tx_source/ps2_detect_module.v     ;         ;
+; source/tx_source/ps2_decode_module.v     ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/tx_source/ps2_decode_module.v     ;         ;
+; source/rx_source/rx_output_data.v        ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/rx_source/rx_output_data.v        ;         ;
+; source/rx_source/rx_module_demo.v        ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/rx_source/rx_module_demo.v        ;         ;
+; source/rx_source/rx_module.v             ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/rx_source/rx_module.v             ;         ;
+; source/rx_source/rx_detect_module.v      ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/rx_source/rx_detect_module.v      ;         ;
+; source/rx_source/rx_control_module.v     ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/rx_source/rx_control_module.v     ;         ;
+; source/rx_source/rx_bps_module.v         ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/rx_source/rx_bps_module.v         ;         ;
+; source/rx_source/NumToLEDPoint.v         ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/rx_source/NumToLEDPoint.v         ;         ;
+; source/rx_source/NumToLEDNoPoint.v       ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/rx_source/NumToLEDNoPoint.v       ;         ;
+; source/rx_source/LED_Display.v           ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_2_Modbus_7Bytes/ps2_uart/source/rx_source/LED_Display.v           ;         ;
++------------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Partition Status Summary                               ;
++----------------+-------------+-------------------------+
+; Partition Name ; Synthesized ; Reason                  ;
++----------------+-------------+-------------------------+
+; Top            ; yes         ; Dependent files changed ;
++----------------+-------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Dependent File Changes for Partition Top                                                                                                                                                           ;
++--------------------------------------------------------+--------------------------------------+-------------------+----------+----------------------------------+----------------------------------+
+; Hierarchy                                              ; File Name                            ; Relative Location ; Change   ; Old                              ; New                              ;
++--------------------------------------------------------+--------------------------------------+-------------------+----------+----------------------------------+----------------------------------+
+; tx_module_demo:TX_U2|tx_module:U2|tx_control_module:U2 ; source/tx_source/tx_control_module.v ; Project Directory ; Checksum ; af31e5062ddff289cd9fb0acfdfe4c50 ; ec57978ad959d3996efb63150e28b297 ;
++--------------------------------------------------------+--------------------------------------+-------------------+----------+----------------------------------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition for Top-Level Resource Utilization by Entity                                                                                                                                                                                 ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Library Name ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+; |ps2_uart                         ; 1275 (0)          ; 190 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart                                                               ; work         ;
+;    |rx_module_demo:RX_U1|         ; 1076 (0)          ; 125 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|rx_module_demo:RX_U1                                          ; work         ;
+;       |LED_Display:LED_U|         ; 125 (83)          ; 50 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|rx_module_demo:RX_U1|LED_Display:LED_U                        ; work         ;
+;          |NumToLEDNoPoint:NTLED2| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|rx_module_demo:RX_U1|LED_Display:LED_U|NumToLEDNoPoint:NTLED2 ; work         ;
+;          |NumToLEDNoPoint:NTLED4| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|rx_module_demo:RX_U1|LED_Display:LED_U|NumToLEDNoPoint:NTLED4 ; work         ;
+;          |NumToLEDNoPoint:NTLED6| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|rx_module_demo:RX_U1|LED_Display:LED_U|NumToLEDNoPoint:NTLED6 ; work         ;
+;          |NumToLEDPoint:NTLED1|   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|rx_module_demo:RX_U1|LED_Display:LED_U|NumToLEDPoint:NTLED1   ; work         ;
+;          |NumToLEDPoint:NTLED3|   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|rx_module_demo:RX_U1|LED_Display:LED_U|NumToLEDPoint:NTLED3   ; work         ;
+;          |NumToLEDPoint:NTLED5|   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|rx_module_demo:RX_U1|LED_Display:LED_U|NumToLEDPoint:NTLED5   ; work         ;
+;       |rx_module:U1|              ; 950 (0)           ; 50 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|rx_module_demo:RX_U1|rx_module:U1                             ; work         ;
+;          |rx_bps_module:U2|       ; 22 (22)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|rx_module_demo:RX_U1|rx_module:U1|rx_bps_module:U2            ; work         ;
+;          |rx_control_module:U3|   ; 926 (926)         ; 35 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|rx_module_demo:RX_U1|rx_module:U1|rx_control_module:U3        ; work         ;
+;          |rx_detect_module:U1|    ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|rx_module_demo:RX_U1|rx_module:U1|rx_detect_module:U1         ; work         ;
+;       |rx_output_data:U2|         ; 1 (1)             ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|rx_module_demo:RX_U1|rx_output_data:U2                        ; work         ;
+;    |tx_module_demo:TX_U2|         ; 199 (0)           ; 65 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|tx_module_demo:TX_U2                                          ; work         ;
+;       |ps2_keyboard_to_hex:UU0|   ; 46 (46)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|tx_module_demo:TX_U2|ps2_keyboard_to_hex:UU0                  ; work         ;
+;       |ps2_module:UUtop|          ; 68 (0)            ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|tx_module_demo:TX_U2|ps2_module:UUtop                         ; work         ;
+;          |ps2_decode_module:U2|   ; 66 (66)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|tx_module_demo:TX_U2|ps2_module:UUtop|ps2_decode_module:U2    ; work         ;
+;          |ps2_detect_module:U1|   ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|tx_module_demo:TX_U2|ps2_module:UUtop|ps2_detect_module:U1    ; work         ;
+;       |ps2_tx_control_module:U1|  ; 13 (13)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|tx_module_demo:TX_U2|ps2_tx_control_module:U1                 ; work         ;
+;       |tx_module:U2|              ; 72 (0)            ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|tx_module_demo:TX_U2|tx_module:U2                             ; work         ;
+;          |tx_bps_module:U1|       ; 22 (22)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|tx_module_demo:TX_U2|tx_module:U2|tx_bps_module:U1            ; work         ;
+;          |tx_control_module:U2|   ; 50 (50)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_uart|tx_module_demo:TX_U2|tx_module:U2|tx_control_module:U2        ; work         ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------+
+; State Machine - |ps2_uart|tx_module_demo:TX_U2|ps2_tx_control_module:U1|NextState ;
++--------------+--------------+--------------+--------------+-----------------------+
+; Name         ; NextState.11 ; NextState.10 ; NextState.01 ; NextState.00          ;
++--------------+--------------+--------------+--------------+-----------------------+
+; NextState.00 ; 0            ; 0            ; 0            ; 0                     ;
+; NextState.01 ; 0            ; 0            ; 1            ; 1                     ;
+; NextState.10 ; 0            ; 1            ; 0            ; 1                     ;
+; NextState.11 ; 1            ; 0            ; 0            ; 1                     ;
++--------------+--------------+--------------+--------------+-----------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------+
+; State Machine - |ps2_uart|tx_module_demo:TX_U2|ps2_tx_control_module:U1|CurrentState    ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+; Name            ; CurrentState.11 ; CurrentState.10 ; CurrentState.01 ; CurrentState.00 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+; CurrentState.00 ; 0               ; 0               ; 0               ; 0               ;
+; CurrentState.01 ; 0               ; 0               ; 1               ; 1               ;
+; CurrentState.10 ; 0               ; 1               ; 0               ; 1               ;
+; CurrentState.11 ; 1               ; 0               ; 0               ; 1               ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                    ;
++--------------------------------------------------------------+----------------------------------------+
+; Register name                                                ; Reason for Removal                     ;
++--------------------------------------------------------------+----------------------------------------+
+; tx_module_demo:TX_U2|ps2_keyboard_to_hex:UU0|KeyBoardData[7] ; Stuck at GND due to stuck port data_in ;
+; tx_module_demo:TX_U2|ps2_tx_control_module:U1|rData[7]       ; Stuck at GND due to stuck port data_in ;
+; tx_module_demo:TX_U2|tx_module:U2|tx_control_module:U2|i[7]  ; Stuck at GND due to stuck port data_in ;
+; tx_module_demo:TX_U2|ps2_tx_control_module:U1|NextState~6    ; Lost fanout                            ;
+; tx_module_demo:TX_U2|ps2_tx_control_module:U1|NextState~7    ; Lost fanout                            ;
+; tx_module_demo:TX_U2|ps2_tx_control_module:U1|CurrentState~4 ; Lost fanout                            ;
+; tx_module_demo:TX_U2|ps2_tx_control_module:U1|CurrentState~5 ; Lost fanout                            ;
+; rx_module_demo:RX_U1|LED_Display:LED_U|i[3]                  ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 8                        ;                                        ;
++--------------------------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                       ;
++--------------------------------------------------------------+---------------------------+--------------------------------------------------------+
+; Register name                                                ; Reason for Removal        ; Registers Removed due to This Register                 ;
++--------------------------------------------------------------+---------------------------+--------------------------------------------------------+
+; tx_module_demo:TX_U2|ps2_keyboard_to_hex:UU0|KeyBoardData[7] ; Stuck at GND              ; tx_module_demo:TX_U2|ps2_tx_control_module:U1|rData[7] ;
+;                                                              ; due to stuck port data_in ;                                                        ;
++--------------------------------------------------------------+---------------------------+--------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |ps2_uart|tx_module_demo:TX_U2|tx_module:U2|tx_bps_module:U1|Count_BPS[2]  ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |ps2_uart|rx_module_demo:RX_U1|rx_module:U1|rx_bps_module:U2|Count_BPS[11] ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 24 LEs               ; 36 LEs                 ; Yes        ; |ps2_uart|rx_module_demo:RX_U1|LED_Display:LED_U|SEL[5]                    ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 35 LEs               ; 35 LEs                 ; Yes        ; |ps2_uart|rx_module_demo:RX_U1|LED_Display:LED_U|DIG[1]                    ;
+; 256:1              ; 7 bits    ; 1190 LEs      ; 168 LEs              ; 1022 LEs               ; Yes        ; |ps2_uart|tx_module_demo:TX_U2|ps2_keyboard_to_hex:UU0|KeyBoardData[4]     ;
+; 441:1              ; 2 bits    ; 588 LEs       ; 6 LEs                ; 582 LEs                ; Yes        ; |ps2_uart|rx_module_demo:RX_U1|rx_module:U1|rx_control_module:U3|i[8]      ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |ps2_uart|tx_module_demo:TX_U2|ps2_tx_control_module:U1|Selector1          ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |ps2_uart|tx_module_demo:TX_U2|ps2_tx_control_module:U1|Selector2          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rx_module_demo:RX_U1|LED_Display:LED_U ;
++----------------+----------------------------------+---------------------------------+
+; Parameter Name ; Value                            ; Type                            ;
++----------------+----------------------------------+---------------------------------+
+; CONSTANT       ; 00000000000000000110000110101000 ; Unsigned Binary                 ;
++----------------+----------------------------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx_module_demo:TX_U2|ps2_module:UUtop|ps2_detect_module:U1 ;
++----------------+----------------------------------+-----------------------------------------------------+
+; Parameter Name ; Value                            ; Type                                                ;
++----------------+----------------------------------+-----------------------------------------------------+
+; CONSTANT       ; 00000000000000000000000000011001 ; Unsigned Binary                                     ;
++----------------+----------------------------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Partition Dependent Files                                                                                 ;
++------------------------------------------+-------------------+---------+----------------------------------+
+; File                                     ; Location          ; Library ; Checksum                         ;
++------------------------------------------+-------------------+---------+----------------------------------+
+; source/ps2_uart.v                        ; Project Directory ; work    ; 40b61fb3a30c238695025560466e0af9 ;
+; source/rx_source/LED_Display.v           ; Project Directory ; work    ; 7c1fd0e146ce1daba1a8e6a2355603f6 ;
+; source/rx_source/NumToLEDNoPoint.v       ; Project Directory ; work    ; 6fdc20f1b7da763b5c8046c4fbc2dd97 ;
+; source/rx_source/NumToLEDPoint.v         ; Project Directory ; work    ; 977c674ebd52d213317747a151e4311b ;
+; source/rx_source/rx_bps_module.v         ; Project Directory ; work    ; 5113ca366ff9b456beebbc34b886be0e ;
+; source/rx_source/rx_control_module.v     ; Project Directory ; work    ; a59ef0d81d3b0f2b7c2b93a2de717335 ;
+; source/rx_source/rx_detect_module.v      ; Project Directory ; work    ; 8fdd794088adc75d8a8eebad06c12598 ;
+; source/rx_source/rx_module.v             ; Project Directory ; work    ; 0ec3d83fa7359515b83fed5ba5fe289c ;
+; source/rx_source/rx_module_demo.v        ; Project Directory ; work    ; 14e9c1891add40584199b10013705c95 ;
+; source/rx_source/rx_output_data.v        ; Project Directory ; work    ; df0184c03d8cde3d345bd750cc8a29b1 ;
+; source/tx_source/ps2_decode_module.v     ; Project Directory ; work    ; 30b672e4c3c6f9899e729afc2ca78625 ;
+; source/tx_source/ps2_detect_module.v     ; Project Directory ; work    ; 26361b220d72725955ce47bc9e1b5374 ;
+; source/tx_source/ps2_keyboard_to_hex.v   ; Project Directory ; work    ; 6c4b5ab2e0de998ab7a4a82517c81ccb ;
+; source/tx_source/ps2_module.v            ; Project Directory ; work    ; 8bc32f57ecf7802a78f0a574349c9df4 ;
+; source/tx_source/ps2_tx_control_module.v ; Project Directory ; work    ; 7c61c06de116bc80b2c09bfb7d1256d5 ;
+; source/tx_source/tx_bps_module.v         ; Project Directory ; work    ; ab2d5c90469532fb13bebe9f29043bb4 ;
+; source/tx_source/tx_control_module.v     ; Project Directory ; work    ; ec57978ad959d3996efb63150e28b297 ;
+; source/tx_source/tx_module.v             ; Project Directory ; work    ; 100ec90bec90f1330799794e29e2def3 ;
+; source/tx_source/tx_module_demo.v        ; Project Directory ; work    ; 986d9fcb131463405b78d1180b9ad480 ;
++------------------------------------------+-------------------+---------+----------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 24                          ;
+; cycloneiii_ff         ; 190                         ;
+;     CLR               ; 52                          ;
+;     CLR SCLR          ; 58                          ;
+;     CLR SLD           ; 1                           ;
+;     ENA               ; 3                           ;
+;     ENA CLR           ; 38                          ;
+;     ENA CLR SLD       ; 7                           ;
+;     ENA SLD           ; 4                           ;
+;     plain             ; 27                          ;
+; cycloneiii_lcell_comb ; 1275                        ;
+;     arith             ; 159                         ;
+;         2 data inputs ; 158                         ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 1116                        ;
+;         0 data inputs ; 8                           ;
+;         1 data inputs ; 17                          ;
+;         2 data inputs ; 63                          ;
+;         3 data inputs ; 218                         ;
+;         4 data inputs ; 810                         ;
+;                       ;                             ;
+; Max LUT depth         ; 12.60                       ;
+; Average LUT depth     ; 7.97                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rx_module_demo:RX_U1|rx_output_data:U2"                                                            ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Number_Data[55..40] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Number_Data[15..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:12     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+    Info: Processing started: Mon Nov 07 09:14:17 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ps2_uart -c ps2_uart
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file source/ps2_uart.v
+    Info (12023): Found entity 1: ps2_uart
+Info (12021): Found 1 design units, including 1 entities, in source file source/tx_source/tx_module_demo.v
+    Info (12023): Found entity 1: tx_module_demo
+Info (12021): Found 1 design units, including 1 entities, in source file source/tx_source/tx_module.v
+    Info (12023): Found entity 1: tx_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/tx_source/tx_control_module.v
+    Info (12023): Found entity 1: tx_control_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/tx_source/tx_bps_module.v
+    Info (12023): Found entity 1: tx_bps_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/tx_source/ps2_tx_control_module.v
+    Info (12023): Found entity 1: ps2_tx_control_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/tx_source/ps2_module.v
+    Info (12023): Found entity 1: ps2_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/tx_source/ps2_keyboard_to_hex.v
+    Info (12023): Found entity 1: ps2_keyboard_to_hex
+Info (12021): Found 1 design units, including 1 entities, in source file source/tx_source/ps2_detect_module.v
+    Info (12023): Found entity 1: ps2_detect_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/tx_source/ps2_decode_module.v
+    Info (12023): Found entity 1: ps2_decode_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/tx_source/keyin_detect.v
+    Info (12023): Found entity 1: keyin_detect
+Info (12021): Found 1 design units, including 1 entities, in source file source/rx_source/rx_output_data.v
+    Info (12023): Found entity 1: rx_output_data
+Info (12021): Found 1 design units, including 1 entities, in source file source/rx_source/rx_module_demo.v
+    Info (12023): Found entity 1: rx_module_demo
+Info (12021): Found 1 design units, including 1 entities, in source file source/rx_source/rx_module.v
+    Info (12023): Found entity 1: rx_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/rx_source/rx_detect_module.v
+    Info (12023): Found entity 1: rx_detect_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/rx_source/rx_control_module.v
+    Info (12023): Found entity 1: rx_control_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/rx_source/rx_bps_module.v
+    Info (12023): Found entity 1: rx_bps_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/rx_source/numtoledpoint.v
+    Info (12023): Found entity 1: NumToLEDPoint
+Info (12021): Found 1 design units, including 1 entities, in source file source/rx_source/numtolednopoint.v
+    Info (12023): Found entity 1: NumToLEDNoPoint
+Info (12021): Found 1 design units, including 1 entities, in source file source/rx_source/led_display.v
+    Info (12023): Found entity 1: LED_Display
+Info (12127): Elaborating entity "ps2_uart" for the top level hierarchy
+Info (12128): Elaborating entity "rx_module_demo" for hierarchy "rx_module_demo:RX_U1"
+Info (12128): Elaborating entity "rx_module" for hierarchy "rx_module_demo:RX_U1|rx_module:U1"
+Info (12128): Elaborating entity "rx_detect_module" for hierarchy "rx_module_demo:RX_U1|rx_module:U1|rx_detect_module:U1"
+Info (12128): Elaborating entity "rx_bps_module" for hierarchy "rx_module_demo:RX_U1|rx_module:U1|rx_bps_module:U2"
+Info (12128): Elaborating entity "rx_control_module" for hierarchy "rx_module_demo:RX_U1|rx_module:U1|rx_control_module:U3"
+Info (12128): Elaborating entity "rx_output_data" for hierarchy "rx_module_demo:RX_U1|rx_output_data:U2"
+Info (12128): Elaborating entity "LED_Display" for hierarchy "rx_module_demo:RX_U1|LED_Display:LED_U"
+Info (12128): Elaborating entity "NumToLEDPoint" for hierarchy "rx_module_demo:RX_U1|LED_Display:LED_U|NumToLEDPoint:NTLED1"
+Info (12128): Elaborating entity "NumToLEDNoPoint" for hierarchy "rx_module_demo:RX_U1|LED_Display:LED_U|NumToLEDNoPoint:NTLED2"
+Info (12128): Elaborating entity "tx_module_demo" for hierarchy "tx_module_demo:TX_U2"
+Info (12128): Elaborating entity "ps2_module" for hierarchy "tx_module_demo:TX_U2|ps2_module:UUtop"
+Info (12128): Elaborating entity "ps2_detect_module" for hierarchy "tx_module_demo:TX_U2|ps2_module:UUtop|ps2_detect_module:U1"
+Info (12128): Elaborating entity "ps2_decode_module" for hierarchy "tx_module_demo:TX_U2|ps2_module:UUtop|ps2_decode_module:U2"
+Info (12128): Elaborating entity "ps2_keyboard_to_hex" for hierarchy "tx_module_demo:TX_U2|ps2_keyboard_to_hex:UU0"
+Info (12128): Elaborating entity "ps2_tx_control_module" for hierarchy "tx_module_demo:TX_U2|ps2_tx_control_module:U1"
+Info (12128): Elaborating entity "tx_module" for hierarchy "tx_module_demo:TX_U2|tx_module:U2"
+Info (12128): Elaborating entity "tx_bps_module" for hierarchy "tx_module_demo:TX_U2|tx_module:U2|tx_bps_module:U1"
+Info (12128): Elaborating entity "tx_control_module" for hierarchy "tx_module_demo:TX_U2|tx_module:U2|tx_control_module:U2"
+Info (12205): 1 design partition requires Analysis and Synthesis
+    Info (12211): Partition "Top" requires synthesis because there were changes to its dependent source files
+Info (12209): No design partitions will skip synthesis in the current incremental compilation
+Info (281020): Starting Logic Optimization and Technology Mapping for Top Partition
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (21057): Implemented 1341 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 19 output pins
+    Info (21061): Implemented 1317 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 702 megabytes
+    Info: Processing ended: Mon Nov 07 09:14:43 2016
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:45
+
+

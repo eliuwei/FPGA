@@ -1,0 +1,443 @@
+Analysis & Synthesis report for tx_module
+Fri Nov 04 18:40:42 2016
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |tx_module_demo|ps2_tx_control_module:U1|NextState
+  9. State Machine - |tx_module_demo|ps2_tx_control_module:U1|CurrentState
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: ps2_module:UUtop|ps2_detect_module:U1
+ 16. Parameter Settings for User Entity Instance: ps2_tx_control_module:U1
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Nov 04 18:40:42 2016       ;
+; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
+; Revision Name                      ; tx_module                                   ;
+; Top-level Entity Name              ; tx_module_demo                              ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 244                                         ;
+;     Total combinational functions  ; 228                                         ;
+;     Dedicated logic registers      ; 94                                          ;
+; Total registers                    ; 94                                          ;
+; Total pins                         ; 9                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE6F17C8        ;                    ;
+; Top-level entity name                                                      ; tx_module_demo     ; tx_module          ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
+; source/tx_module_demo.v          ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_1/ps2_tx_module/source/tx_module_demo.v        ;         ;
+; source/tx_module.v               ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_1/ps2_tx_module/source/tx_module.v             ;         ;
+; source/tx_control_module.v       ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_1/ps2_tx_module/source/tx_control_module.v     ;         ;
+; source/tx_bps_module.v           ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_1/ps2_tx_module/source/tx_bps_module.v         ;         ;
+; source/ps2_tx_control_module.v   ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_1/ps2_tx_module/source/ps2_tx_control_module.v ;         ;
+; source/ps2_module.v              ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_1/ps2_tx_module/source/ps2_module.v            ;         ;
+; source/ps2_detect_module.v       ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_1/ps2_tx_module/source/ps2_detect_module.v     ;         ;
+; source/ps2_decode_module.v       ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_1/ps2_tx_module/source/ps2_decode_module.v     ;         ;
+; source/ps2_keyboard_to_hex.v     ; yes             ; User Verilog HDL File  ; E:/quartus_Project/ps2_uart_V1_1/ps2_tx_module/source/ps2_keyboard_to_hex.v   ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 244       ;
+;                                             ;           ;
+; Total combinational functions               ; 228       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 119       ;
+;     -- 3 input functions                    ; 33        ;
+;     -- <=2 input functions                  ; 76        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 176       ;
+;     -- arithmetic mode                      ; 52        ;
+;                                             ;           ;
+; Total registers                             ; 94        ;
+;     -- Dedicated logic registers            ; 94        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 9         ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 94        ;
+; Total fan-out                               ; 1072      ;
+; Average fan-out                             ; 3.15      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                              ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
+; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Library Name ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
+; |tx_module_demo               ; 228 (0)           ; 94 (0)       ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |tx_module_demo                                       ; work         ;
+;    |ps2_keyboard_to_hex:UU0|  ; 47 (47)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_module_demo|ps2_keyboard_to_hex:UU0               ; work         ;
+;    |ps2_module:UUtop|         ; 72 (0)            ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_module_demo|ps2_module:UUtop                      ; work         ;
+;       |ps2_decode_module:U2|  ; 70 (70)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_module_demo|ps2_module:UUtop|ps2_decode_module:U2 ; work         ;
+;       |ps2_detect_module:U1|  ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_module_demo|ps2_module:UUtop|ps2_detect_module:U1 ; work         ;
+;    |ps2_tx_control_module:U1| ; 63 (63)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_module_demo|ps2_tx_control_module:U1              ; work         ;
+;    |tx_module:U2|             ; 46 (0)            ; 19 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_module_demo|tx_module:U2                          ; work         ;
+;       |tx_bps_module:U1|      ; 22 (22)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_module_demo|tx_module:U2|tx_bps_module:U1         ; work         ;
+;       |tx_control_module:U2|  ; 24 (24)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tx_module_demo|tx_module:U2|tx_control_module:U2     ; work         ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------+
+; State Machine - |tx_module_demo|ps2_tx_control_module:U1|NextState       ;
++--------------+--------------+--------------+--------------+--------------+
+; Name         ; NextState.11 ; NextState.10 ; NextState.01 ; NextState.00 ;
++--------------+--------------+--------------+--------------+--------------+
+; NextState.00 ; 0            ; 0            ; 0            ; 0            ;
+; NextState.01 ; 0            ; 0            ; 1            ; 1            ;
+; NextState.10 ; 0            ; 1            ; 0            ; 1            ;
+; NextState.11 ; 1            ; 0            ; 0            ; 1            ;
++--------------+--------------+--------------+--------------+--------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------+
+; State Machine - |tx_module_demo|ps2_tx_control_module:U1|CurrentState                   ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+; Name            ; CurrentState.11 ; CurrentState.10 ; CurrentState.01 ; CurrentState.00 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+; CurrentState.00 ; 0               ; 0               ; 0               ; 0               ;
+; CurrentState.01 ; 0               ; 0               ; 1               ; 1               ;
+; CurrentState.10 ; 0               ; 1               ; 0               ; 1               ;
+; CurrentState.11 ; 1               ; 0               ; 0               ; 1               ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; ps2_keyboard_to_hex:UU0|KeyBoardData[7] ; Stuck at GND due to stuck port data_in ;
+; ps2_tx_control_module:U1|rData[7]       ; Stuck at GND due to stuck port data_in ;
+; ps2_tx_control_module:U1|NextState~6    ; Lost fanout                            ;
+; ps2_tx_control_module:U1|NextState~7    ; Lost fanout                            ;
+; ps2_tx_control_module:U1|CurrentState~4 ; Lost fanout                            ;
+; ps2_tx_control_module:U1|CurrentState~5 ; Lost fanout                            ;
+; Total Number of Removed Registers = 6   ;                                        ;
++-----------------------------------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                  ;
++-----------------------------------------+---------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal        ; Registers Removed due to This Register ;
++-----------------------------------------+---------------------------+----------------------------------------+
+; ps2_keyboard_to_hex:UU0|KeyBoardData[7] ; Stuck at GND              ; ps2_tx_control_module:U1|rData[7]      ;
+;                                         ; due to stuck port data_in ;                                        ;
++-----------------------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 94    ;
+; Number of registers using Synchronous Clear  ; 45    ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 78    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 11    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------+
+; Inverted Register Statistics                           ;
++----------------------------------------------+---------+
+; Inverted Register                            ; Fan out ;
++----------------------------------------------+---------+
+; tx_module:U2|tx_control_module:U2|rTX        ; 4       ;
+; ps2_module:UUtop|ps2_detect_module:U1|H2L_F1 ; 9       ;
+; ps2_module:UUtop|ps2_detect_module:U1|H2L_F2 ; 8       ;
+; Total number of inverted registers = 3       ;         ;
++----------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |tx_module_demo|tx_module:U2|tx_bps_module:U1|Count_BPS[0] ;
+; 256:1              ; 7 bits    ; 1190 LEs      ; 168 LEs              ; 1022 LEs               ; Yes        ; |tx_module_demo|ps2_keyboard_to_hex:UU0|KeyBoardData[4]    ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |tx_module_demo|ps2_tx_control_module:U1|Selector3         ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |tx_module_demo|ps2_tx_control_module:U1|Selector2         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ps2_module:UUtop|ps2_detect_module:U1 ;
++----------------+----------------------------------+--------------------------------+
+; Parameter Name ; Value                            ; Type                           ;
++----------------+----------------------------------+--------------------------------+
+; CONSTANT       ; 00000000000000000000000000011001 ; Unsigned Binary                ;
++----------------+----------------------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ps2_tx_control_module:U1 ;
++----------------+----------------------------------+-------------------+
+; Parameter Name ; Value                            ; Type              ;
++----------------+----------------------------------+-------------------+
+; CONSTANT       ; 00000010111110101111000010000000 ; Unsigned Binary   ;
++----------------+----------------------------------+-------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 9                           ;
+; cycloneiii_ff         ; 94                          ;
+;     CLR               ; 21                          ;
+;     CLR SCLR          ; 45                          ;
+;     CLR SLD           ; 1                           ;
+;     ENA CLR           ; 4                           ;
+;     ENA CLR SLD       ; 7                           ;
+;     plain             ; 16                          ;
+; cycloneiii_lcell_comb ; 229                         ;
+;     arith             ; 52                          ;
+;         2 data inputs ; 52                          ;
+;     normal            ; 177                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 18                          ;
+;         3 data inputs ; 33                          ;
+;         4 data inputs ; 119                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.39                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+    Info: Processing started: Fri Nov 04 18:40:24 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tx_module -c tx_module
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file source/tx_module_demo.v
+    Info (12023): Found entity 1: tx_module_demo
+Info (12021): Found 1 design units, including 1 entities, in source file source/tx_module.v
+    Info (12023): Found entity 1: tx_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/tx_control_module.v
+    Info (12023): Found entity 1: tx_control_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/tx_bps_module.v
+    Info (12023): Found entity 1: tx_bps_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/keyin_detect.v
+    Info (12023): Found entity 1: keyin_detect
+Info (12021): Found 1 design units, including 1 entities, in source file source/ps2_tx_control_module.v
+    Info (12023): Found entity 1: ps2_tx_control_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/ps2_module.v
+    Info (12023): Found entity 1: ps2_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/ps2_detect_module.v
+    Info (12023): Found entity 1: ps2_detect_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/ps2_decode_module.v
+    Info (12023): Found entity 1: ps2_decode_module
+Info (12021): Found 1 design units, including 1 entities, in source file source/ps2_keyboard_to_hex.v
+    Info (12023): Found entity 1: ps2_keyboard_to_hex
+Info (12127): Elaborating entity "tx_module_demo" for the top level hierarchy
+Info (12128): Elaborating entity "ps2_module" for hierarchy "ps2_module:UUtop"
+Info (12128): Elaborating entity "ps2_detect_module" for hierarchy "ps2_module:UUtop|ps2_detect_module:U1"
+Info (12128): Elaborating entity "ps2_decode_module" for hierarchy "ps2_module:UUtop|ps2_decode_module:U2"
+Info (12128): Elaborating entity "ps2_keyboard_to_hex" for hierarchy "ps2_keyboard_to_hex:UU0"
+Info (12128): Elaborating entity "ps2_tx_control_module" for hierarchy "ps2_tx_control_module:U1"
+Info (12128): Elaborating entity "tx_module" for hierarchy "tx_module:U2"
+Info (12128): Elaborating entity "tx_bps_module" for hierarchy "tx_module:U2|tx_bps_module:U1"
+Info (12128): Elaborating entity "tx_control_module" for hierarchy "tx_module:U2|tx_control_module:U2"
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 253 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 244 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 694 megabytes
+    Info: Processing ended: Fri Nov 04 18:40:42 2016
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:38
+
+

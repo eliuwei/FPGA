@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Nov 06 09:17:23 2016
+Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
+Revision Name : MyWatch_V1_0
+Top-level Entity Name : MyWatch_V1_0
+Family : Cyclone IV E
+Total logic elements : 620
+    Total combinational functions : 609
+    Dedicated logic registers : 177
+Total registers : 177
+Total pins : 23
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,401 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'div_f:DIV_f_1|clk'
+Slack : -13.890
+TNS   : -279.471
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK'
+Slack : -4.721
+TNS   : -371.555
+
+Type  : Slow 1200mV 85C Model Setup 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : -2.643
+TNS   : -23.251
+
+Type  : Slow 1200mV 85C Model Setup 'counter60:MINUTE1|ToCarry'
+Slack : -2.636
+TNS   : -21.088
+
+Type  : Slow 1200mV 85C Model Setup 'counter60:SECOND1|ToCarry'
+Slack : -2.582
+TNS   : -23.032
+
+Type  : Slow 1200mV 85C Model Setup 'keyin_detect:DETCET_KEY_U2|_100Hz_clk'
+Slack : -1.520
+TNS   : -1.520
+
+Type  : Slow 1200mV 85C Model Setup 'keyin_detect:DETCET_KEY_U3|_100Hz_clk'
+Slack : -0.553
+TNS   : -0.553
+
+Type  : Slow 1200mV 85C Model Setup 'keyin_detect:DETCET_KEY_RESET|_100Hz_clk'
+Slack : -0.469
+TNS   : -0.469
+
+Type  : Slow 1200mV 85C Model Setup 'keyin_detect:DETCET_KEY_U1|_100Hz_clk'
+Slack : -0.344
+TNS   : -0.344
+
+Type  : Slow 1200mV 85C Model Hold 'div_f:DIV_f_1|clk'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : 0.755
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK'
+Slack : 0.760
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'counter60:SECOND1|ToCarry'
+Slack : 0.769
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'counter60:MINUTE1|ToCarry'
+Slack : 0.772
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'keyin_detect:DETCET_KEY_U1|_100Hz_clk'
+Slack : 0.792
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'keyin_detect:DETCET_KEY_RESET|_100Hz_clk'
+Slack : 0.943
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'keyin_detect:DETCET_KEY_U3|_100Hz_clk'
+Slack : 1.009
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'keyin_detect:DETCET_KEY_U2|_100Hz_clk'
+Slack : 2.017
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'counter60:SECOND1|ToCarry'
+Slack : -0.887
+TNS   : -5.695
+
+Type  : Slow 1200mV 85C Model Recovery 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : -0.533
+TNS   : -4.781
+
+Type  : Slow 1200mV 85C Model Recovery 'counter60:MINUTE1|ToCarry'
+Slack : -0.496
+TNS   : -3.968
+
+Type  : Slow 1200mV 85C Model Removal 'counter60:SECOND1|ToCarry'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'counter60:MINUTE1|ToCarry'
+Slack : 0.566
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : 0.569
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK'
+Slack : -3.000
+TNS   : -160.622
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'div_f:DIV_f_1|clk'
+Slack : -1.487
+TNS   : -60.967
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'counter60:SECOND1|ToCarry'
+Slack : -1.487
+TNS   : -26.766
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : -1.487
+TNS   : -26.766
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'counter60:MINUTE1|ToCarry'
+Slack : -1.487
+TNS   : -23.792
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keyin_detect:DETCET_KEY_RESET|_100Hz_clk'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keyin_detect:DETCET_KEY_U1|_100Hz_clk'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keyin_detect:DETCET_KEY_U2|_100Hz_clk'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keyin_detect:DETCET_KEY_U3|_100Hz_clk'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Setup 'div_f:DIV_f_1|clk'
+Slack : -12.651
+TNS   : -255.503
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK'
+Slack : -4.384
+TNS   : -340.194
+
+Type  : Slow 1200mV 0C Model Setup 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : -2.485
+TNS   : -21.889
+
+Type  : Slow 1200mV 0C Model Setup 'counter60:MINUTE1|ToCarry'
+Slack : -2.462
+TNS   : -19.696
+
+Type  : Slow 1200mV 0C Model Setup 'counter60:SECOND1|ToCarry'
+Slack : -2.407
+TNS   : -21.510
+
+Type  : Slow 1200mV 0C Model Setup 'keyin_detect:DETCET_KEY_U2|_100Hz_clk'
+Slack : -1.328
+TNS   : -1.328
+
+Type  : Slow 1200mV 0C Model Setup 'keyin_detect:DETCET_KEY_U3|_100Hz_clk'
+Slack : -0.468
+TNS   : -0.468
+
+Type  : Slow 1200mV 0C Model Setup 'keyin_detect:DETCET_KEY_RESET|_100Hz_clk'
+Slack : -0.371
+TNS   : -0.371
+
+Type  : Slow 1200mV 0C Model Setup 'keyin_detect:DETCET_KEY_U1|_100Hz_clk'
+Slack : -0.274
+TNS   : -0.274
+
+Type  : Slow 1200mV 0C Model Hold 'div_f:DIV_f_1|clk'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : 0.672
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'counter60:SECOND1|ToCarry'
+Slack : 0.694
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK'
+Slack : 0.707
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'counter60:MINUTE1|ToCarry'
+Slack : 0.717
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'keyin_detect:DETCET_KEY_U1|_100Hz_clk'
+Slack : 0.776
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'keyin_detect:DETCET_KEY_RESET|_100Hz_clk'
+Slack : 0.918
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'keyin_detect:DETCET_KEY_U3|_100Hz_clk'
+Slack : 0.978
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'keyin_detect:DETCET_KEY_U2|_100Hz_clk'
+Slack : 1.874
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'counter60:SECOND1|ToCarry'
+Slack : -0.869
+TNS   : -5.701
+
+Type  : Slow 1200mV 0C Model Recovery 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : -0.458
+TNS   : -4.090
+
+Type  : Slow 1200mV 0C Model Recovery 'counter60:MINUTE1|ToCarry'
+Slack : -0.451
+TNS   : -3.608
+
+Type  : Slow 1200mV 0C Model Removal 'counter60:SECOND1|ToCarry'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'counter60:MINUTE1|ToCarry'
+Slack : 0.495
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : 0.533
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK'
+Slack : -3.000
+TNS   : -160.622
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'div_f:DIV_f_1|clk'
+Slack : -1.487
+TNS   : -60.967
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : -1.487
+TNS   : -27.596
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'counter60:SECOND1|ToCarry'
+Slack : -1.487
+TNS   : -26.991
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'counter60:MINUTE1|ToCarry'
+Slack : -1.487
+TNS   : -24.160
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keyin_detect:DETCET_KEY_RESET|_100Hz_clk'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keyin_detect:DETCET_KEY_U1|_100Hz_clk'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keyin_detect:DETCET_KEY_U2|_100Hz_clk'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keyin_detect:DETCET_KEY_U3|_100Hz_clk'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Fast 1200mV 0C Model Setup 'div_f:DIV_f_1|clk'
+Slack : -5.603
+TNS   : -104.052
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK'
+Slack : -1.494
+TNS   : -94.574
+
+Type  : Fast 1200mV 0C Model Setup 'counter60:MINUTE1|ToCarry'
+Slack : -0.739
+TNS   : -5.912
+
+Type  : Fast 1200mV 0C Model Setup 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : -0.723
+TNS   : -6.328
+
+Type  : Fast 1200mV 0C Model Setup 'counter60:SECOND1|ToCarry'
+Slack : -0.713
+TNS   : -6.337
+
+Type  : Fast 1200mV 0C Model Setup 'keyin_detect:DETCET_KEY_U2|_100Hz_clk'
+Slack : -0.519
+TNS   : -0.519
+
+Type  : Fast 1200mV 0C Model Setup 'keyin_detect:DETCET_KEY_U3|_100Hz_clk'
+Slack : -0.036
+TNS   : -0.036
+
+Type  : Fast 1200mV 0C Model Setup 'keyin_detect:DETCET_KEY_RESET|_100Hz_clk'
+Slack : -0.032
+TNS   : -0.032
+
+Type  : Fast 1200mV 0C Model Setup 'keyin_detect:DETCET_KEY_U1|_100Hz_clk'
+Slack : 0.088
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK'
+Slack : 0.145
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'div_f:DIV_f_1|clk'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : 0.290
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'counter60:SECOND1|ToCarry'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'counter60:MINUTE1|ToCarry'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'keyin_detect:DETCET_KEY_U1|_100Hz_clk'
+Slack : 0.634
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'keyin_detect:DETCET_KEY_RESET|_100Hz_clk'
+Slack : 0.754
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'keyin_detect:DETCET_KEY_U3|_100Hz_clk'
+Slack : 0.764
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'keyin_detect:DETCET_KEY_U2|_100Hz_clk'
+Slack : 1.265
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'counter60:SECOND1|ToCarry'
+Slack : -0.196
+TNS   : -0.548
+
+Type  : Fast 1200mV 0C Model Recovery 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : -0.119
+TNS   : -1.055
+
+Type  : Fast 1200mV 0C Model Recovery 'counter60:MINUTE1|ToCarry'
+Slack : -0.017
+TNS   : -0.136
+
+Type  : Fast 1200mV 0C Model Removal 'counter60:SECOND1|ToCarry'
+Slack : 0.090
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'counter60:MINUTE1|ToCarry'
+Slack : 0.135
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK'
+Slack : -3.000
+TNS   : -144.551
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'div_f:DIV_f_1|clk'
+Slack : -1.000
+TNS   : -41.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'counter60:SECOND1|ToCarry'
+Slack : -1.000
+TNS   : -18.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'div_f_1Hz:DIV_1Hz_1|_1Hz_clk'
+Slack : -1.000
+TNS   : -18.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'counter60:MINUTE1|ToCarry'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keyin_detect:DETCET_KEY_RESET|_100Hz_clk'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keyin_detect:DETCET_KEY_U1|_100Hz_clk'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keyin_detect:DETCET_KEY_U2|_100Hz_clk'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keyin_detect:DETCET_KEY_U3|_100Hz_clk'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

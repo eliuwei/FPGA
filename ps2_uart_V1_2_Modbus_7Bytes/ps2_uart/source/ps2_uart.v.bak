@@ -1,0 +1,24 @@
+module ps2_uart 
+(
+
+
+
+);
+
+
+
+module rx_module_demo
+(
+    CLK, RSTn,
+	 RX_Pin_In,
+	 DIG,SEL
+);
+
+
+module tx_module_demo
+(
+    CLK, RSTn,
+	 PS2_CLK_Pin_In, PS2_Data_Pin_In,
+	 TX_Pin_Out,
+	 LED
+);
